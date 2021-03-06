@@ -6,8 +6,7 @@ import java.util.Map;
 
 public class PrintNonRepeatedElementsInOrder {
 
-	static ArrayList<Integer> printNonRepeated(int arr[], int n)
-    {
+	static ArrayList<Integer> printNonRepeated(int arr[], int n){
         Map<Integer,Integer> map = new LinkedHashMap<Integer,Integer>();
         for(int i=0;i<n;i++){
             if(map.containsKey(arr[i]))
@@ -24,7 +23,6 @@ public class PrintNonRepeatedElementsInOrder {
     }
 	
 	public static void main(String[] args) {
-		
 		int[] arr = { 2,1,1,3,3,5,4,6};
 		System.out.println(printNonRepeated(arr,8));
 	}
