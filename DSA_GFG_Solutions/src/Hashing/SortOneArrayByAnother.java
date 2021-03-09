@@ -6,8 +6,7 @@ import java.util.TreeMap;
 
 public class SortOneArrayByAnother {
 
-	public static int[] sortA1ByA2(int A1[], int N, int A2[], int M)
-    {
+	public static int[] sortA1ByA2(int A1[], int N, int A2[], int M) {
         int[] result = new int[N];
         Map<Integer,Integer> map = new TreeMap<Integer,Integer>();
         for(int i=0;i<N;i++){
