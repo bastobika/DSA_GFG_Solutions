@@ -50,6 +50,14 @@ public class BasicOperations {
         return head;
     }
     
+    void displayData(Node head) {
+    	Node temp = head;
+    	while(temp != null) {
+			System.out.println(temp.data);
+			temp = temp.next;
+		}
+    }
+    
 	public static void main(String[] args) {
 		BasicOperations basic = new BasicOperations();
 		Node head = basic.insertAtBeginning(null, 5);
@@ -58,10 +66,7 @@ public class BasicOperations {
 		head = basic.insertAtEnd(head, 17);
 		head = basic.insertInMid(head, 51);
 		System.out.println("Node Count : "+getCount(head));
-		while(head != null) {
-			System.out.println(head.data);
-			head = head.next;
-		}
+		basic.displayData(head);
 	}
 
 }
