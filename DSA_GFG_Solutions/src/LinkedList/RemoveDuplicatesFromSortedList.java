@@ -2,7 +2,7 @@ package LinkedList;
 
 import LinkedList.BasicOperations.Node;
 
-public class RemoveDuplicatesfromSortedList {
+public class RemoveDuplicatesFromSortedList {
 
 	 static Node removeDuplicates(Node root)
 	    {
