@@ -34,6 +34,30 @@ public class LoopsInLinkedList {
         return 0;
     }
 	
+	public static Node removeLoop(Node head) {
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(slow == fast){
+                if(slow == head){
+                    while(fast.next != head)
+                        fast = fast.next;
+                    
+                }else{
+                    slow = head;
+                    while(slow.next != fast.next){
+                        slow = slow.next;
+                        fast = fast.next;
+                    }
+                }
+                fast.next = null;
+            }
+        }
+        return head;
+    }
+	
 	public static void main(String[] args) {
 		BasicOperations basic = new BasicOperations();
 		Node head = basic.insertAtBeginning(null, 5);
@@ -48,6 +72,7 @@ public class LoopsInLinkedList {
 		temp.next = loopPoint;
 		System.out.println("Does Loop Exists ? : "+detectLoop(head));
 		System.out.println("Number of nodes in the loop : "+countNodesinLoop(head));
+		basic.displayData(removeLoop(head));
 	}
 
 }
