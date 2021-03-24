@@ -1,19 +1,11 @@
 package Matrix;
 
-public class RotateMatrixBy90Degree {
+public class InterchangeRowsOfMatrix {
 
-	static int[][] rotateby90(int matrix[][], int n)  { 
-        //Transpose of Matrix
-        for(int i=0;i<n;i++)
-            for(int j=0;j<n;j++)
-                if(i > j){
-                    matrix[i][j] = matrix[i][j] + matrix[j][i];
-                    matrix[j][i] = matrix[i][j] - matrix[j][i];
-                    matrix[i][j] = matrix[i][j] - matrix[j][i];
-                }
-        //Interchange Rows of Matrix
+	static int[][] interchangeRows(int matrix[][])  {
+        int n = matrix.length;
         for(int i=0;i<n/2;i++)
-            for(int j=0;j<n;j++){
+            for(int j=0;j<matrix[0].length;j++){
                 matrix[i][j] = matrix[i][j] + matrix[n-i-1][j];
                 matrix[n-i-1][j] = matrix[i][j] - matrix[n-i-1][j];
                 matrix[i][j] = matrix[i][j] - matrix[n-i-1][j];
@@ -25,7 +17,7 @@ public class RotateMatrixBy90Degree {
 		int A[][] = {{6, 5, 4},
 		           {1, 2, 5},
 		           {7, 9, 7}};
-		int[][] result = rotateby90(A,3);
+		int[][] result = interchangeRows(A);
 		for(int i=0;i<result.length;i++)
 			for(int j=0;j<result[0].length;j++)
 				System.out.print(result[i][j] + " ");
