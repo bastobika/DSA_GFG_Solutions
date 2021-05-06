@@ -45,6 +45,12 @@ public class Basics {
         return A*Math.pow((double)B/A,N-1);
     }
 	
+	private static int computePower(int x, int y) {
+		if(y==0)
+				return 1;
+		return x*computePower(x,y-1);
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("Absolute Value of -32 is = " + absolute(-32));
 		System.out.println("32 Degree Celcius in Fahrenheit is = " + cToF(32));
@@ -54,6 +60,7 @@ public class Basics {
 				System.out.print(result.get(i) + " ");
 		System.out.println("\n49 is prime or not " + isPrime(49));
 		System.out.println("GP Term = "+termOfGP(1,3,5));
+		System.out.println("2 to the power of 3 is "+computePower(2,3));
 	}
 
 }
