@@ -50,6 +50,16 @@ public class Basics {
 				return 1;
 		return x*computePower(x,y-1);
 	}
+
+	public static long sumUnderModulo(long a, long b){
+        long mod = 1000000007;
+        return (a%mod + b%mod)%mod;
+    } 
+	
+	static long multiplicationUnderModulo(long a, long b){
+        long mod = 1000000007;
+        return ((a%mod)*(b%mod))%mod;
+    }
 	
 	public static void main(String[] args) {
 		System.out.println("Absolute Value of -32 is = " + absolute(-32));
@@ -61,6 +71,10 @@ public class Basics {
 		System.out.println("\n49 is prime or not " + isPrime(49));
 		System.out.println("GP Term = "+termOfGP(1,3,5));
 		System.out.println("2 to the power of 3 is "+computePower(2,3));
+		Long a = 9223372036854775807L;
+		Long b = 9223372036854775807L;
+		System.out.println("Addition under modulo is " + sumUnderModulo(a,b));
+		System.out.println("Multiplication under modulo is " + multiplicationUnderModulo(a,b));
 	}
 
 }
