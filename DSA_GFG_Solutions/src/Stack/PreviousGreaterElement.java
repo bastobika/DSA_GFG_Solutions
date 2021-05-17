@@ -16,6 +16,7 @@ public class PreviousGreaterElement {
 		for(int i=0;i<n;i++)
 			System.out.print(arr[i] + " ");
 	}
+	
 	public static void main(String[] args) {
 		int arr[] = {15,10,18,12,4,6,2,8};
 		previousGreater(arr,8);
