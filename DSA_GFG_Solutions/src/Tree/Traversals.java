@@ -12,6 +12,7 @@ public class Traversals {
 	         left=right=null;
           }
 	 }
+	
 	static ArrayList<Integer> preOrder(Node root) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         if(root == null)

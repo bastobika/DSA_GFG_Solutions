@@ -42,8 +42,7 @@ public class MaxSumOfNonAdjacentNodes {
     }
     
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Max Sum Of Non Adjacent Nodes");
 	}
 
 }
