@@ -23,6 +23,7 @@ public class KMostOccuringElements {
         }
         
     }
+	
     //Function to print the sum of frequencies of k numbers
     //with most occurrences in an array.
     static int kMostFrequent(int arr[], int n, int k){
